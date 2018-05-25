@@ -1,2 +1,3 @@
 etc/rootCA.*
 etc/server.*
+etc/secure.conf
