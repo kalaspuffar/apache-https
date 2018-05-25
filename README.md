@@ -4,8 +4,14 @@ A small repository showing how to setup ssl on a docker image.
 ### Some good commands.
 
 ```
-sudo docker build -t my-apache2 .
-sudo docker run -dit --name my-running-app -p 8443:443 my-apache2
+cd etc
+./create_root_cert.sh
+./create_domain_cert.sh myserver.local
+```
+
+```
+sudo docker build -t myserver-image .
+sudo docker run -dit --name myserver-container -p 8443:443 myserver-image
 ```
 
 ```
